@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.iweather"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name="activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="activity.GuideActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
+
+            <!--  -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="activity.ChooseCity"
+            android:label="选择城市"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name="activity.About"
+            android:label="关于"
+            android:parentActivityName="activity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="activity.Setting"
+            android:label="设置"
+             
+            android:parentActivityName="activity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="activity.Suggest"
+            android:label="建议"
+            android:parentActivityName="activity.Setting" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.Setting" />
+        </activity>
+        <activity
+            android:name="activity.Help"
+            android:label="帮助"
+            android:parentActivityName="activity.Setting" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.Setting" />
+        </activity>
+
+        <service android:name="service.AutoUpdateService" />
+        <service android:name="service.HandleDataIntentService" >
+        </service>
+        <service android:name="service.NoticationService" >
+        </service>
+        <service android:name="service.DCServiceIntent" >
+        </service>
+
+        <receiver android:name="service.UpdateBroadReceiver" >
+        </receiver>
+    </application>
+
+</manifest>
