@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 搜索栏 -->
+
+   <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <view.CustomSearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:background="@drawable/shape_custom_searchview"
+            android:iconifiedByDefault="false"
+            android:imeOptions="actionSearch"
+            android:paddingRight="5dp"
+            android:queryHint="输入城市名搜索(中文)" >
+        </view.CustomSearchView>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar" >
+
+        <ListView
+            android:id="@+id/search_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/cc_relativeL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- 热门城市 -->
+
+            <TextView
+                android:id="@+id/popular_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="28dp"
+                android:text="热门城市"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/auto_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cut_line_one"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:text="自动定位"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="14sp" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:id="@+id/cut_line_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popular_city"
+                android:paddingTop="8dp"
+                android:src="@drawable/background_gray_color_line" />
+
+            <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cut_line_one"
+                android:layout_marginTop="8dp" >
+
+                <!-- 第一栏 -->
+
+                <TableRow style="@style/tablebar" >
+
+                    <Button
+                        android:id="@+id/beijin"
+                        style="@style/texttablerow"
+                        android:background="@null"
+                        android:text="北京" />
+
+                    <Button
+                        android:id="@+id/shanghai"
+                        style="@style/texttablerow"
+                        android:text="上海" />
+
+                    <Button
+                        android:id="@+id/guangzhou"
+                        style="@style/texttablerow"
+                        android:text="广州" />
+
+                    <Button
+                        android:id="@+id/shenzhen"
+                        style="@style/texttablerow"
+                        android:text="深圳" />
+                </TableRow>
+                <!-- 第二栏 -->
+
+                <TableRow style="@style/tablebar" >
+
+                    <Button
+                        android:id="@+id/tianjin"
+                        style="@style/texttablerow"
+                        android:text="天津" />
+
+                    <Button
+                        android:id="@+id/xingyang"
+                        style="@style/texttablerow"
+                        android:text="信阳" />
+
+                    <Button
+                        android:id="@+id/hangzhou"
+                        style="@style/texttablerow"
+                        android:text="杭州" />
+
+                    <Button
+                        android:id="@+id/ningbo"
+                        style="@style/texttablerow"
+                        android:text="宁波" />
+                </TableRow>
+                <!-- 第三栏 -->
+
+                <TableRow style="@style/tablebar" >
+
+                    <Button
+                        android:id="@+id/xian"
+                        style="@style/texttablerow"
+                        android:text="西安" />
+
+                    <Button
+                        android:id="@+id/chengdu"
+                        style="@style/texttablerow"
+                        android:text="成都" />
+
+                    <Button
+                        android:id="@+id/chongqin"
+                        style="@style/texttablerow"
+                        android:text="重庆" />
+
+                    <Button
+                        android:id="@+id/nanjin"
+                        style="@style/texttablerow"
+                        android:text="南京" />
+                </TableRow>
+                <!-- 第四栏 -->
+
+                <TableRow style="@style/tablebar" >
+
+                    <Button
+                        android:id="@+id/suzhou"
+                        style="@style/texttablerow"
+                        android:text="苏州" />
+
+                    <Button
+                        android:id="@+id/wuhan"
+                        style="@style/texttablerow"
+                        android:text="武汉" />
+
+                    <Button
+                        android:id="@+id/dongguan"
+                        style="@style/texttablerow"
+                        android:text="东莞" />
+
+                    <Button
+                        android:id="@+id/xiamen"
+                        style="@style/texttablerow"
+                        android:text="厦门" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

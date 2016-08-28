@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F3E0"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/layout_sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sp" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/sp_title1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/sp_title2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/sp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/sp_txt"
+                android:src="@drawable/sunny" />
+
+            <TextView
+                android:id="@+id/sp_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="与你一起看世界"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_txt"
+                android:layout_toRightOf="@+id/sp_txt"
+                android:gravity="center"
+                android:text="--阳光天气"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>
